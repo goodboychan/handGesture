@@ -1,0 +1,2 @@
+load svmstruct
+handGesturetest(svmstruct)

@@ -1,0 +1,32 @@
+# Title : A framework for hand gesture recognition using machine Learning techniques
+# 
+# 0. Contributor
+#	- Chanseok Kang (2013-20738 // chanseok@csap.snu.ac.kr)
+#	- Sangchul Kim  (2013-20760 // stdio@tcs.snu.ac.kr)
+
+# 1. Abstraction
+# This program is a framework for hand gesture recognition based on MATLAB
+# All tests works properly in MATLAB R2014a & Image Acquisition Toolbox 
+# libSVM & Kinect runtime framework are required for recognition
+
+# 2. Instruction
+#	1) Collect RightHand Data
+#		- Define the filename such as {alphabet_what you want to train}_{#}.png" in "handGestureDataset.m"
+#		- When kinect is installed properly, execute "handGestureDataset.m" 
+#		- Once kinect detect human, right hand will be catched automatically.
+#		- 10 frames will be saved in each 5 seconds
+#
+#	2) Train the data
+#		- Once the dataset folder is defined, execute "trainingAndTest.m"
+#		- libSVM is required for training, so we include the libsvm sharedlibrary in windows/linux version
+#		- After a while, svmstruct will be generated.
+#		- we include test process using svmpredict()
+#			- But we remove the print message by recompiling svm for convenience, you cannot see the predict result
+#
+#	3) Run the Framework
+#		- execute "guiRun.m"
+#		- once gui is appeared, press start button, then you can test our framework
+#		* caution : If you want to turn off the framework, be sure to press the stop button, not close the window
+#		- If you cannot execute this framework properly, run "imaqreset" command in MATLAB and retry.
+
+# if you have any question for this framework, please feel free to contact us. Thank you :)
